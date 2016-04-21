@@ -1,0 +1,2159 @@
+
+/tmp/busybox-1.2.0/util-linux/ipcs.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/dmesg.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/rdate.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/fdisk.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fdisk/advanced.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/osf/label.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sun/label.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sgi/label.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/aix/label.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fdisk/writable.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/fdformat.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/getopt.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/swaponoff.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/mkswap.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mkswap/v0.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/more.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/use/termios.h
+
+/tmp/busybox-1.2.0/util-linux/mount.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/mtab/support.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mtab/support.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mount/loop.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mount/nfs.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/mkfs_minix.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/minix2.h
+
+/tmp/busybox-1.2.0/util-linux/fbset.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fbset/readmode.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fbset/fancy.h
+
+/tmp/busybox-1.2.0/util-linux/switch_root.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/pivot_root.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/freeramdisk.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/freeramdisk.h \
+   /tmp/busybox-1.2.0/include/config/enable/fdflush.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/nfsmount.o: /tmp/busybox-1.2.0/util-linux/nfsmount.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mount/nfs.h
+
+/tmp/busybox-1.2.0/util-linux/ipcrm.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/hexdump.o: /tmp/busybox-1.2.0/include/dump.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/umount.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mtab/support.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mount/loop.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/umount/all.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/setarch.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/util-linux/hwclock.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hwclock/adjtime/fhs.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/hwclock/long/options.h
+
+/tmp/busybox-1.2.0/util-linux/fsck_minix.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/minix2.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/mdev.o: /tmp/busybox-1.2.0/include/xregex.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mdev/exec.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mdev/conf.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/losetup.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/util-linux/readprofile.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/editors/patch.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/editors/vi.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/optimize/cursor.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/vi/win/resize.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/win/resize.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/set.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/setopts.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/readonly.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/dot/cmd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/use/signals.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/search.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/yankmark.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/vi/colon.h \
+   /tmp/busybox-1.2.0/include/config/config/locale/support.h \
+   /tmp/busybox-1.2.0/include/config/bb/bt.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/editors/awk.o: /tmp/busybox-1.2.0/include/xregex.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/awk/math.h
+
+/tmp/busybox-1.2.0/editors/ed.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/editors/sed.o: /tmp/busybox-1.2.0/include/xregex.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/applets/version.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/bb/bt.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/applets/applets.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/grp_.h \
+   /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/applets.h \
+   /tmp/busybox-1.2.0/include/usage.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/suid/config/quiet.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/suid/config.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/suid/config.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/suid.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/suid.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/compress/usage.h \
+   /tmp/busybox-1.2.0/include/config/enable/show/usage.h
+
+/tmp/busybox-1.2.0/applets/busybox.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/autowidth.h \
+   /tmp/busybox-1.2.0/include/config/enable/locale/support.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/installer.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/installer.h
+
+/tmp/busybox-1.2.0/procps/free.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/procps/pidof.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/pidof/omit.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/pidof/single.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/procps/sysctl.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/procps/ps.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/procps/top.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/top/cpu/usage/percentage.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/top/cpu/usage/percentage.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/use/termios.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/procps/uptime.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/procps/fuser.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/procps/renice.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/procps/kill.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/killall.h
+
+/tmp/busybox-1.2.0/init/init.o: /tmp/busybox-1.2.0/init/libcontract_priv.h
+
+/tmp/busybox-1.2.0/init/halt.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/init.h
+
+/tmp/busybox-1.2.0/init/init_shared.o: /tmp/busybox-1.2.0/init/init_shared.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/init.h
+
+/tmp/busybox-1.2.0/init/mesg.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/findutils/find.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/exec.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/inum.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/newer.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/xdev.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/type.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/perm.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/mmin.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/mtime.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/find/print0.h
+
+/tmp/busybox-1.2.0/findutils/xargs.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/zero/term.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/termopt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/quotes.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/confirmation.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/findutils/grep.o: /tmp/busybox-1.2.0/include/xregex.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/grep/context.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/grep/fgrep/alias.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/grep/egrep/alias.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/libpwdgrp/pwd_grp_internal.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/shadow_.h \
+   /tmp/busybox-1.2.0/include/grp_.h \
+   /tmp/busybox-1.2.0/include/pwd_.h
+
+/tmp/busybox-1.2.0/libpwdgrp/pwd_grp.o: /tmp/busybox-1.2.0/libpwdgrp/pwd_grp_internal.c \
+   /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/shadow_.h
+
+/tmp/busybox-1.2.0/loginutils/sulogin.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/shadowpasswds.h \
+   /tmp/busybox-1.2.0/include/config/enable/selinux.h
+
+/tmp/busybox-1.2.0/loginutils/vlock.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/loginutils/passwd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/shadowpasswds.h
+
+/tmp/busybox-1.2.0/loginutils/deluser.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/deluser.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/shadowpasswds.h
+
+/tmp/busybox-1.2.0/loginutils/addgroup.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/shadowpasswds.h
+
+/tmp/busybox-1.2.0/loginutils/adduser.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/shadowpasswds.h
+
+/tmp/busybox-1.2.0/loginutils/su.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/utmp.h \
+   /tmp/busybox-1.2.0/include/config/enable/selinux.h
+
+/tmp/busybox-1.2.0/loginutils/login.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/securetty.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/wtmp.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/utmp.h \
+   /tmp/busybox-1.2.0/include/config/config/selinux.h
+
+/tmp/busybox-1.2.0/loginutils/getty.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/syslogd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/wtmp.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/utmp.h
+
+/tmp/busybox-1.2.0/include/busybox.h: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/applets.h
+
+/tmp/busybox-1.2.0/include/pwd_.h: /tmp/busybox-1.2.0/include/config/config/use/bb/pwd/grp.h
+
+/tmp/busybox-1.2.0/include/libbb.h: /tmp/busybox-1.2.0/include/platform.h \
+   /tmp/busybox-1.2.0/include/shadow_.h \
+   /tmp/busybox-1.2.0/include/grp_.h \
+   /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/top/cpu/usage/percentage.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/devfs.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/shadowpasswds.h \
+   /tmp/busybox-1.2.0/include/config/config/selinux.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/buffers/go/in/bss.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/buffers/go/on/stack.h
+
+/tmp/busybox-1.2.0/include/inet_common.h: /tmp/busybox-1.2.0/include/platform.h
+
+/tmp/busybox-1.2.0/include/shadow_.h: /tmp/busybox-1.2.0/include/config/config/use/bb/shadow.h
+
+/tmp/busybox-1.2.0/include/unarchive.h: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/include/usage.h: /tmp/busybox-1.2.0/include/config/config/feature/ipc/syslog.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/remote/log.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/rotate/logfile.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ps/wide.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/pidof/omit.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/pidof/single.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tftp/blocksize.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tftp/put.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tftp/get.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/telnetd/inetd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/telnet/autologin.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/ping6.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/ping.h \
+   /tmp/busybox-1.2.0/include/config/config/nc/gaping/security/hole.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipcalc/fancy.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/hw.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/memstart/ioaddr/irq.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/slip.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/status.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/auth/md5.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/basic/auth.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/setuid.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/without/inetd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/makedevs/table.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/makedevs/leaf.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/getset/dma.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/tristate/hwif.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/drive/reset.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/unregister/hwif.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/scan/hwif.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/get/identity.h \
+   /tmp/busybox-1.2.0/include/config/use/devfsd/fg/np.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/mtab/support.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/mount/loop.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/mdev/exec.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/insmod/load/map.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/zero/term.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/termopt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/xargs/support/confirmation.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/grep/context.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/grep/egrep/alias.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/exec.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/inum.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/newer.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/type.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/perm.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/mmin.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/mtime.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/find/print0.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/start/stop/daemon/fancy.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/readlink/follow.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/md5/sha1/sum/check.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/human/readable.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/human/readable.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/autowidth.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/tail.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/stat/format.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/sort/big.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/sleep.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/color.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/timestamps.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/sortfiles.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/recursive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/followlinks.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/filetypes.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/fancy/head.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/fancy/echo.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/du/default/blocksize_1k.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/du/default/blocksize_1k.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/dd/ibs/obs.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/date/isofmt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/compress.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/gzip.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/lzma.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/bzip2.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/create.h \
+   /tmp/busybox-1.2.0/include/config/config/selinux.h
+
+/tmp/busybox-1.2.0/include/grp_.h: /tmp/busybox-1.2.0/include/config/config/use/bb/pwd/grp.h
+
+/tmp/busybox-1.2.0/include/applets.h: /tmp/busybox-1.2.0/include/config/use/logger.h \
+   /tmp/busybox-1.2.0/include/config/use/klogd.h \
+   /tmp/busybox-1.2.0/include/config/use/logread.h \
+   /tmp/busybox-1.2.0/include/config/use/syslogd.h \
+   /tmp/busybox-1.2.0/include/config/use/msh.h \
+   /tmp/busybox-1.2.0/include/config/use/lash.h \
+   /tmp/busybox-1.2.0/include/config/use/hush.h \
+   /tmp/busybox-1.2.0/include/config/use/ash.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/sh/is/msh.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/sh/is/lash.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/sh/is/hush.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/sh/is/ash.h \
+   /tmp/busybox-1.2.0/include/config/use/uptime.h \
+   /tmp/busybox-1.2.0/include/config/use/top.h \
+   /tmp/busybox-1.2.0/include/config/use/bb/sysctl.h \
+   /tmp/busybox-1.2.0/include/config/use/renice.h \
+   /tmp/busybox-1.2.0/include/config/use/ps.h \
+   /tmp/busybox-1.2.0/include/config/use/pidof.h \
+   /tmp/busybox-1.2.0/include/config/use/killall.h \
+   /tmp/busybox-1.2.0/include/config/use/kill.h \
+   /tmp/busybox-1.2.0/include/config/use/fuser.h \
+   /tmp/busybox-1.2.0/include/config/use/free.h \
+   /tmp/busybox-1.2.0/include/config/use/zcip.h \
+   /tmp/busybox-1.2.0/include/config/use/wget.h \
+   /tmp/busybox-1.2.0/include/config/use/vconfig.h \
+   /tmp/busybox-1.2.0/include/config/use/app/dumpleases.h \
+   /tmp/busybox-1.2.0/include/config/use/app/udhcpc.h \
+   /tmp/busybox-1.2.0/include/config/use/app/udhcpd.h \
+   /tmp/busybox-1.2.0/include/config/use/traceroute.h \
+   /tmp/busybox-1.2.0/include/config/use/tftp.h \
+   /tmp/busybox-1.2.0/include/config/use/telnetd.h \
+   /tmp/busybox-1.2.0/include/config/use/telnet.h \
+   /tmp/busybox-1.2.0/include/config/use/route.h \
+   /tmp/busybox-1.2.0/include/config/use/ping6.h \
+   /tmp/busybox-1.2.0/include/config/use/ping.h \
+   /tmp/busybox-1.2.0/include/config/use/nslookup.h \
+   /tmp/busybox-1.2.0/include/config/use/netstat.h \
+   /tmp/busybox-1.2.0/include/config/use/nc.h \
+   /tmp/busybox-1.2.0/include/config/use/nameif.h \
+   /tmp/busybox-1.2.0/include/config/use/ipcalc.h \
+   /tmp/busybox-1.2.0/include/config/use/iptunnel.h \
+   /tmp/busybox-1.2.0/include/config/use/iproute.h \
+   /tmp/busybox-1.2.0/include/config/use/iplink.h \
+   /tmp/busybox-1.2.0/include/config/use/ipaddr.h \
+   /tmp/busybox-1.2.0/include/config/use/ip.h \
+   /tmp/busybox-1.2.0/include/config/use/inetd.h \
+   /tmp/busybox-1.2.0/include/config/use/ifupdown.h \
+   /tmp/busybox-1.2.0/include/config/use/ifconfig.h \
+   /tmp/busybox-1.2.0/include/config/use/httpd.h \
+   /tmp/busybox-1.2.0/include/config/use/hostname.h \
+   /tmp/busybox-1.2.0/include/config/use/ftpput.h \
+   /tmp/busybox-1.2.0/include/config/use/ftpget.h \
+   /tmp/busybox-1.2.0/include/config/use/fakeidentd.h \
+   /tmp/busybox-1.2.0/include/config/use/ether/wake.h \
+   /tmp/busybox-1.2.0/include/config/use/dnsd.h \
+   /tmp/busybox-1.2.0/include/config/use/arping.h \
+   /tmp/busybox-1.2.0/include/config/use/watchdog.h \
+   /tmp/busybox-1.2.0/include/config/use/time.h \
+   /tmp/busybox-1.2.0/include/config/use/setsid.h \
+   /tmp/busybox-1.2.0/include/config/use/strings.h \
+   /tmp/busybox-1.2.0/include/config/use/rx.h \
+   /tmp/busybox-1.2.0/include/config/use/runlevel.h \
+   /tmp/busybox-1.2.0/include/config/use/mt.h \
+   /tmp/busybox-1.2.0/include/config/use/mountpoint.h \
+   /tmp/busybox-1.2.0/include/config/use/makedevs.h \
+   /tmp/busybox-1.2.0/include/config/use/hdparm.h \
+   /tmp/busybox-1.2.0/include/config/use/less.h \
+   /tmp/busybox-1.2.0/include/config/use/last.h \
+   /tmp/busybox-1.2.0/include/config/use/eject.h \
+   /tmp/busybox-1.2.0/include/config/use/devfsd.h \
+   /tmp/busybox-1.2.0/include/config/use/dc.h \
+   /tmp/busybox-1.2.0/include/config/use/crontab.h \
+   /tmp/busybox-1.2.0/include/config/use/crond.h \
+   /tmp/busybox-1.2.0/include/config/use/bbconfig.h \
+   /tmp/busybox-1.2.0/include/config/use/adjtimex.h \
+   /tmp/busybox-1.2.0/include/config/use/switch/root.h \
+   /tmp/busybox-1.2.0/include/config/use/swaponoff.h \
+   /tmp/busybox-1.2.0/include/config/use/setarch.h \
+   /tmp/busybox-1.2.0/include/config/use/readprofile.h \
+   /tmp/busybox-1.2.0/include/config/use/rdate.h \
+   /tmp/busybox-1.2.0/include/config/use/pivot/root.h \
+   /tmp/busybox-1.2.0/include/config/use/more.h \
+   /tmp/busybox-1.2.0/include/config/use/mkswap.h \
+   /tmp/busybox-1.2.0/include/config/use/mdev.h \
+   /tmp/busybox-1.2.0/include/config/use/losetup.h \
+   /tmp/busybox-1.2.0/include/config/use/ipcs.h \
+   /tmp/busybox-1.2.0/include/config/use/ipcrm.h \
+   /tmp/busybox-1.2.0/include/config/use/hwclock.h \
+   /tmp/busybox-1.2.0/include/config/use/hexdump.h \
+   /tmp/busybox-1.2.0/include/config/use/getopt.h \
+   /tmp/busybox-1.2.0/include/config/use/mkfs/minix.h \
+   /tmp/busybox-1.2.0/include/config/use/fsck/minix.h \
+   /tmp/busybox-1.2.0/include/config/use/freeramdisk.h \
+   /tmp/busybox-1.2.0/include/config/use/fdisk.h \
+   /tmp/busybox-1.2.0/include/config/use/fdformat.h \
+   /tmp/busybox-1.2.0/include/config/use/fdflush.h \
+   /tmp/busybox-1.2.0/include/config/use/fbset.h \
+   /tmp/busybox-1.2.0/include/config/use/dmesg.h \
+   /tmp/busybox-1.2.0/include/config/use/modprobe.h \
+   /tmp/busybox-1.2.0/include/config/use/lsmod.h \
+   /tmp/busybox-1.2.0/include/config/use/rmmod.h \
+   /tmp/busybox-1.2.0/include/config/use/insmod.h \
+   /tmp/busybox-1.2.0/include/config/use/findfs.h \
+   /tmp/busybox-1.2.0/include/config/use/e2label.h \
+   /tmp/busybox-1.2.0/include/config/use/tune2fs.h \
+   /tmp/busybox-1.2.0/include/config/use/mke2fs.h \
+   /tmp/busybox-1.2.0/include/config/use/lsattr.h \
+   /tmp/busybox-1.2.0/include/config/use/fsck.h \
+   /tmp/busybox-1.2.0/include/config/use/e2fsck.h \
+   /tmp/busybox-1.2.0/include/config/use/chattr.h \
+   /tmp/busybox-1.2.0/include/config/use/vlock.h \
+   /tmp/busybox-1.2.0/include/config/use/sulogin.h \
+   /tmp/busybox-1.2.0/include/config/use/su.h \
+   /tmp/busybox-1.2.0/include/config/use/passwd.h \
+   /tmp/busybox-1.2.0/include/config/use/login.h \
+   /tmp/busybox-1.2.0/include/config/use/getty.h \
+   /tmp/busybox-1.2.0/include/config/use/deluser.h \
+   /tmp/busybox-1.2.0/include/config/use/adduser.h \
+   /tmp/busybox-1.2.0/include/config/use/delgroup.h \
+   /tmp/busybox-1.2.0/include/config/use/addgroup.h \
+   /tmp/busybox-1.2.0/include/config/use/mesg.h \
+   /tmp/busybox-1.2.0/include/config/use/halt.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/initrd.h \
+   /tmp/busybox-1.2.0/include/config/use/init.h \
+   /tmp/busybox-1.2.0/include/config/use/xargs.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/grep/fgrep/alias.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/grep/egrep/alias.h \
+   /tmp/busybox-1.2.0/include/config/use/grep.h \
+   /tmp/busybox-1.2.0/include/config/use/find.h \
+   /tmp/busybox-1.2.0/include/config/use/vi.h \
+   /tmp/busybox-1.2.0/include/config/use/sed.h \
+   /tmp/busybox-1.2.0/include/config/use/patch.h \
+   /tmp/busybox-1.2.0/include/config/use/ed.h \
+   /tmp/busybox-1.2.0/include/config/use/awk.h \
+   /tmp/busybox-1.2.0/include/config/use/which.h \
+   /tmp/busybox-1.2.0/include/config/use/start/stop/daemon.h \
+   /tmp/busybox-1.2.0/include/config/use/run/parts.h \
+   /tmp/busybox-1.2.0/include/config/use/readlink.h \
+   /tmp/busybox-1.2.0/include/config/use/pipe/progress.h \
+   /tmp/busybox-1.2.0/include/config/use/mktemp.h \
+   /tmp/busybox-1.2.0/include/config/use/setlogcons.h \
+   /tmp/busybox-1.2.0/include/config/use/setkeycodes.h \
+   /tmp/busybox-1.2.0/include/config/use/setconsole.h \
+   /tmp/busybox-1.2.0/include/config/use/reset.h \
+   /tmp/busybox-1.2.0/include/config/use/openvt.h \
+   /tmp/busybox-1.2.0/include/config/use/loadkmap.h \
+   /tmp/busybox-1.2.0/include/config/use/loadfont.h \
+   /tmp/busybox-1.2.0/include/config/use/dumpkmap.h \
+   /tmp/busybox-1.2.0/include/config/use/deallocvt.h \
+   /tmp/busybox-1.2.0/include/config/use/clear.h \
+   /tmp/busybox-1.2.0/include/config/use/chvt.h \
+   /tmp/busybox-1.2.0/include/config/use/yes.h \
+   /tmp/busybox-1.2.0/include/config/use/whoami.h \
+   /tmp/busybox-1.2.0/include/config/use/who.h \
+   /tmp/busybox-1.2.0/include/config/use/wc.h \
+   /tmp/busybox-1.2.0/include/config/use/watch.h \
+   /tmp/busybox-1.2.0/include/config/use/uuencode.h \
+   /tmp/busybox-1.2.0/include/config/use/uudecode.h \
+   /tmp/busybox-1.2.0/include/config/use/usleep.h \
+   /tmp/busybox-1.2.0/include/config/use/uniq.h \
+   /tmp/busybox-1.2.0/include/config/use/uname.h \
+   /tmp/busybox-1.2.0/include/config/use/umount.h \
+   /tmp/busybox-1.2.0/include/config/use/tty.h \
+   /tmp/busybox-1.2.0/include/config/use/true.h \
+   /tmp/busybox-1.2.0/include/config/use/tr.h \
+   /tmp/busybox-1.2.0/include/config/use/touch.h \
+   /tmp/busybox-1.2.0/include/config/use/test.h \
+   /tmp/busybox-1.2.0/include/config/use/tee.h \
+   /tmp/busybox-1.2.0/include/config/use/tail.h \
+   /tmp/busybox-1.2.0/include/config/use/sync.h \
+   /tmp/busybox-1.2.0/include/config/use/sum.h \
+   /tmp/busybox-1.2.0/include/config/use/stty.h \
+   /tmp/busybox-1.2.0/include/config/use/stat.h \
+   /tmp/busybox-1.2.0/include/config/use/sort.h \
+   /tmp/busybox-1.2.0/include/config/use/sleep.h \
+   /tmp/busybox-1.2.0/include/config/use/sha1sum.h \
+   /tmp/busybox-1.2.0/include/config/use/seq.h \
+   /tmp/busybox-1.2.0/include/config/use/rmdir.h \
+   /tmp/busybox-1.2.0/include/config/use/rm.h \
+   /tmp/busybox-1.2.0/include/config/use/realpath.h \
+   /tmp/busybox-1.2.0/include/config/use/pwd.h \
+   /tmp/busybox-1.2.0/include/config/use/printf.h \
+   /tmp/busybox-1.2.0/include/config/use/printenv.h \
+   /tmp/busybox-1.2.0/include/config/use/od.h \
+   /tmp/busybox-1.2.0/include/config/use/nohup.h \
+   /tmp/busybox-1.2.0/include/config/use/nice.h \
+   /tmp/busybox-1.2.0/include/config/use/mv.h \
+   /tmp/busybox-1.2.0/include/config/use/mount.h \
+   /tmp/busybox-1.2.0/include/config/use/mknod.h \
+   /tmp/busybox-1.2.0/include/config/use/mkfifo.h \
+   /tmp/busybox-1.2.0/include/config/use/mkdir.h \
+   /tmp/busybox-1.2.0/include/config/use/md5sum.h \
+   /tmp/busybox-1.2.0/include/config/use/ls.h \
+   /tmp/busybox-1.2.0/include/config/use/logname.h \
+   /tmp/busybox-1.2.0/include/config/use/ln.h \
+   /tmp/busybox-1.2.0/include/config/use/length.h \
+   /tmp/busybox-1.2.0/include/config/use/install.h \
+   /tmp/busybox-1.2.0/include/config/use/id.h \
+   /tmp/busybox-1.2.0/include/config/use/hostid.h \
+   /tmp/busybox-1.2.0/include/config/use/head.h \
+   /tmp/busybox-1.2.0/include/config/use/fold.h \
+   /tmp/busybox-1.2.0/include/config/use/false.h \
+   /tmp/busybox-1.2.0/include/config/use/expr.h \
+   /tmp/busybox-1.2.0/include/config/use/env.h \
+   /tmp/busybox-1.2.0/include/config/use/echo.h \
+   /tmp/busybox-1.2.0/include/config/use/du.h \
+   /tmp/busybox-1.2.0/include/config/use/unix2dos.h \
+   /tmp/busybox-1.2.0/include/config/use/dos2unix.h \
+   /tmp/busybox-1.2.0/include/config/use/dirname.h \
+   /tmp/busybox-1.2.0/include/config/use/diff.h \
+   /tmp/busybox-1.2.0/include/config/use/df.h \
+   /tmp/busybox-1.2.0/include/config/use/dd.h \
+   /tmp/busybox-1.2.0/include/config/use/date.h \
+   /tmp/busybox-1.2.0/include/config/use/cut.h \
+   /tmp/busybox-1.2.0/include/config/use/cp.h \
+   /tmp/busybox-1.2.0/include/config/use/comm.h \
+   /tmp/busybox-1.2.0/include/config/use/cmp.h \
+   /tmp/busybox-1.2.0/include/config/use/cksum.h \
+   /tmp/busybox-1.2.0/include/config/use/chroot.h \
+   /tmp/busybox-1.2.0/include/config/use/chown.h \
+   /tmp/busybox-1.2.0/include/config/use/chmod.h \
+   /tmp/busybox-1.2.0/include/config/use/chgrp.h \
+   /tmp/busybox-1.2.0/include/config/use/catv.h \
+   /tmp/busybox-1.2.0/include/config/use/cat.h \
+   /tmp/busybox-1.2.0/include/config/use/cal.h \
+   /tmp/busybox-1.2.0/include/config/use/basename.h \
+   /tmp/busybox-1.2.0/include/config/use/unzip.h \
+   /tmp/busybox-1.2.0/include/config/use/unlzma.h \
+   /tmp/busybox-1.2.0/include/config/use/uncompress.h \
+   /tmp/busybox-1.2.0/include/config/use/tar.h \
+   /tmp/busybox-1.2.0/include/config/use/rpm.h \
+   /tmp/busybox-1.2.0/include/config/use/rpm2cpio.h \
+   /tmp/busybox-1.2.0/include/config/use/gzip.h \
+   /tmp/busybox-1.2.0/include/config/use/gunzip.h \
+   /tmp/busybox-1.2.0/include/config/use/dpkg/deb.h \
+   /tmp/busybox-1.2.0/include/config/use/dpkg.h \
+   /tmp/busybox-1.2.0/include/config/use/cpio.h \
+   /tmp/busybox-1.2.0/include/config/use/bunzip2.h \
+   /tmp/busybox-1.2.0/include/config/use/ar.h \
+   /tmp/busybox-1.2.0/include/config/config/install/no/usr.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/verbose/usage.h
+
+/tmp/busybox-1.2.0/miscutils/makedevs.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/makedevs/table.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/makedevs/leaf.h
+
+/tmp/busybox-1.2.0/miscutils/time.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/watchdog.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/last.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/crond.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/crond/call/sendmail.h \
+   /tmp/busybox-1.2.0/include/config/enable/debug/crond/option.h
+
+/tmp/busybox-1.2.0/miscutils/adjtimex.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/less.o: /tmp/busybox-1.2.0/include/xregex.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/less/regexp.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/less/marks.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/less/flagcs.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/less/flags.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/less/brackets.h
+
+/tmp/busybox-1.2.0/miscutils/bbconfig.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/hdparm.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/getset/dma.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hdparm/hdio/getset/dma.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/tristate/hwif.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hdparm/hdio/tristate/hwif.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/drive/reset.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hdparm/hdio/drive/reset.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/unregister/hwif.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hdparm/hdio/unregister/hwif.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/hdio/scan/hwif.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/hdparm/hdio/scan/hwif.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hdparm/hdio/scan/hwif.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/hdparm/get/identity.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/hdparm/get/identity.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/hdparm/get/identity.h
+
+/tmp/busybox-1.2.0/miscutils/devfsd.o: /tmp/busybox-1.2.0/include/xregex.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/devfsd/verbose.h \
+   /tmp/busybox-1.2.0/include/config/config/devfsd/verbose.h \
+   /tmp/busybox-1.2.0/include/config/enable/devfsd/fg/np.h \
+   /tmp/busybox-1.2.0/include/config/enable/devfsd/modload.h \
+   /tmp/busybox-1.2.0/include/config/enable/debug.h \
+   /tmp/busybox-1.2.0/include/config/config/debug.h
+
+/tmp/busybox-1.2.0/miscutils/mountpoint.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/mt.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/dc.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/crontab.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/rx.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/strings.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/miscutils/eject.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mtab/support.h
+
+/tmp/busybox-1.2.0/miscutils/setsid.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/miscutils/runlevel.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/e2fsprogs/lsattr.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2fsck.o: /tmp/busybox-1.2.0/e2fsprogs/e2fsck.h
+
+/tmp/busybox-1.2.0/e2fsprogs/util.o: /tmp/busybox-1.2.0/e2fsprogs/util.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2fsck.h: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_ext_attr.h \
+   /tmp/busybox-1.2.0/e2fsprogs/fsck.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/kernel-jbd.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/kernel-list.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/e2fsprogs/chattr.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/tune2fs.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/kernel-jbd.h \
+   /tmp/busybox-1.2.0/e2fsprogs/util.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/grp_.h \
+   /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/findfs.h \
+   /tmp/busybox-1.2.0/include/config/config/findfs.h \
+   /tmp/busybox-1.2.0/include/config/enable/e2label.h \
+   /tmp/busybox-1.2.0/include/config/config/e2label.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/e2fsprogs/fsck.o: /tmp/busybox-1.2.0/e2fsprogs/fsck.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/devfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/mke2fs.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuid.h \
+   /tmp/busybox-1.2.0/e2fsprogs/util.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsbb.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/libbb/make_directory.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_xdaemon.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/error_msg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/safe_read.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/printf.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/get_last_path_component.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/find_root_device.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/chomp.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/procps.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/top/cpu/usage/percentage.h
+
+/tmp/busybox-1.2.0/libbb/get_line_from_file.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/inet_common.o: /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h
+
+/tmp/busybox-1.2.0/libbb/xgetlarg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/crc32.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/create_icmp6_socket.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h
+
+/tmp/busybox-1.2.0/libbb/mode_string.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/compare_string_array.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/pwd2spwd.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/shadow_.h
+
+/tmp/busybox-1.2.0/libbb/correct_password.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/shadowpasswds.h
+
+/tmp/busybox-1.2.0/libbb/bb_do_delay.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/perror_nomsg_and_die.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/create_icmp_socket.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/xgethostbyname2.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h
+
+/tmp/busybox-1.2.0/libbb/setup_environment.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/xregcomp.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/xregex.h
+
+/tmp/busybox-1.2.0/libbb/md5.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/md5/size/vs/speed.h
+
+/tmp/busybox-1.2.0/libbb/llist.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_xlisten.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/process_escape_sequence.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_asprintf.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/run_shell.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/selinux.h
+
+/tmp/busybox-1.2.0/libbb/vdprintf.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/opendir.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/fgets_str.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/safe_strncpy.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/xgethostbyname.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/login.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/get_terminal_width_height.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/obscure.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/recursive_action.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/qmodule.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/speed_table.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/loop.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/herror_msg_and_die.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/trim.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/perror_msg_and_die.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/device_open.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/xconnect.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/libbb/xreadlink.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/mtab_file.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/mtab/support.h
+
+/tmp/busybox-1.2.0/libbb/skip_whitespace.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_xsocket.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/u_signal_names.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/verror_msg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/sha1.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/wfopen.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/restricted_shell.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/error_msg_and_die.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/xgetularg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/xstat.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/getopt_ulflags.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/ps.h \
+   /tmp/busybox-1.2.0/include/config/config/tar.h \
+   /tmp/busybox-1.2.0/include/config/config/ar.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/enable/getopt/long.h
+
+/tmp/busybox-1.2.0/libbb/xgetcwd.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_askpass.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/copy_file.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/preserve/hardlinks.h
+
+/tmp/busybox-1.2.0/libbb/run_parts.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/dump.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/dump.h
+
+/tmp/busybox-1.2.0/libbb/default_error_retval.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/concat_subpath_file.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/concat_path_file.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_xchdir.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/human_readable.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/read_package_field.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/last_char_is.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/print_file.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/change_identity.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/vherror_msg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/find_pid_by_name.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/isdirectory.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/inode_hash.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/libbb/get_console.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/vperror_msg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/messages.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/bb/bt.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/libbb/xfuncs.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/debug.h \
+   /tmp/busybox-1.2.0/include/config/config/busybox/exec/path.h
+
+/tmp/busybox-1.2.0/libbb/simplify_path.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/herror_msg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_xbind.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/full_write.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/parse_number.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/parse_mode.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/perror_msg.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/safe_write.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/mtab.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/mtab/support.h
+
+/tmp/busybox-1.2.0/libbb/copyfd.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/ask_confirmation.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/kernel_version.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/safe_strtol.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/remove_file.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/pw_encrypt.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/full_read.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/libbb/bb_pwd.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/grp_.h \
+   /tmp/busybox-1.2.0/include/pwd_.h
+
+/tmp/busybox-1.2.0/coreutils/md5_sha1_sum.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/md5/sha1/sum/check.h \
+   /tmp/busybox-1.2.0/include/config/enable/sha1sum.h \
+   /tmp/busybox-1.2.0/include/config/config/sha1sum.h \
+   /tmp/busybox-1.2.0/include/config/enable/md5sum.h \
+   /tmp/busybox-1.2.0/include/config/config/md5sum.h
+
+/tmp/busybox-1.2.0/coreutils/printf.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/uname.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/sleep.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/sleep.h
+
+/tmp/busybox-1.2.0/coreutils/wc.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/locale/support.h
+
+/tmp/busybox-1.2.0/coreutils/basename.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/nice.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/mv.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mv/long/options.h
+
+/tmp/busybox-1.2.0/coreutils/dd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/dd/ibs/obs.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/dd/signal/handling.h
+
+/tmp/busybox-1.2.0/coreutils/df.o: /tmp/busybox-1.2.0/coreutils/fslib.h \
+   /tmp/busybox-1.2.0/coreutils/fslib.c \
+   /tmp/busybox-1.2.0/coreutils/deffs.c \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/uudecode.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/mknod.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/diff.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/diff/minimal.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/diff/dir.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/diff/binary.h
+
+/tmp/busybox-1.2.0/coreutils/ln.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/mkfifo.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/dos2unix.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/tee.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tee/use/block/io.h
+
+/tmp/busybox-1.2.0/coreutils/date.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/date/isofmt.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/date/isofmt.h
+
+/tmp/busybox-1.2.0/coreutils/rm.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/expr.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/expr/math/support_64.h
+
+/tmp/busybox-1.2.0/coreutils/true.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/test.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/test_64.h
+
+/tmp/busybox-1.2.0/coreutils/cksum.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/fold.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/debug/yank/susv2.h
+
+/tmp/busybox-1.2.0/coreutils/tr.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tr/equiv.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tr/classes.h
+
+/tmp/busybox-1.2.0/coreutils/sort.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sort/big.h
+
+/tmp/busybox-1.2.0/coreutils/seq.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/nohup.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/coreutils/pwd.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/chmod.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/realpath.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/coreutils/yes.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/head.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/fancy/head.h \
+   /tmp/busybox-1.2.0/include/config/enable/debug/yank/susv2.h
+
+/tmp/busybox-1.2.0/coreutils/od.o: /tmp/busybox-1.2.0/include/dump.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/cp.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/stty.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/sum.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/install.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/install/long/options.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/coreutils/uuencode.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/stat.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/stat/format.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/stat/format.h
+
+/tmp/busybox-1.2.0/coreutils/uniq.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/chown.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/echo.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/echo.h
+
+/tmp/busybox-1.2.0/coreutils/length.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/env.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/env/long/options.h
+
+/tmp/busybox-1.2.0/coreutils/tail.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/fancy/tail.h \
+   /tmp/busybox-1.2.0/include/config/enable/debug/yank/susv2.h
+
+/tmp/busybox-1.2.0/coreutils/false.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/hostid.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/catv.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/coreutils/usleep.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/who.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/coreutils/chroot.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/cal.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/locale/support.h
+
+/tmp/busybox-1.2.0/coreutils/chgrp.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/printenv.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/mkdir.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/mkdir/long/options.h
+
+/tmp/busybox-1.2.0/coreutils/watch.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/cat.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/du.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/human/readable.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/du/default/blocksize_1k.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/coreutils/sync.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/rmdir.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/ls.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/human/readable.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/autowidth.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/color/is/default.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/color.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/username.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ls/timestamps.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/timestamps.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/ls/sortfiles.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ls/sortfiles.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/sortfiles.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ls/recursive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/recursive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/followlinks.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ls/filetypes.h \
+   /tmp/busybox-1.2.0/include/config/config/selinux.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/enable/locale/support.h
+
+/tmp/busybox-1.2.0/coreutils/cmp.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/dirname.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/tty.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/touch.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/logname.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/whoami.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/cut.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/comm.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/id.o: /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/selinux.h
+
+/tmp/busybox-1.2.0/coreutils/fslib.o: /tmp/busybox-1.2.0/coreutils/fslib.h
+
+/tmp/busybox-1.2.0/coreutils/mount.o: /tmp/busybox-1.2.0/coreutils/fslib.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/coreutils/umount.o: /tmp/busybox-1.2.0/coreutils/fslib.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/shell/cmdedit.h: /tmp/busybox-1.2.0/include/config/config/feature/command/savehistory.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing/vi.h \
+   /tmp/busybox-1.2.0/include/config/config/ash.h
+
+/tmp/busybox-1.2.0/shell/hush.o: /tmp/busybox-1.2.0/shell/cmdedit.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/fancy/prompt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/standalone/shell.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/extra/quiet.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/shell/lash.o: /tmp/busybox-1.2.0/shell/cmdedit.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/fancy/prompt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/sh/standalone/shell.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/extra/quiet.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/config/locale/support.h
+
+/tmp/busybox-1.2.0/shell/msh.o: /tmp/busybox-1.2.0/shell/cmdedit.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/fancy/prompt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/standalone/shell.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/extra/quiet.h \
+   /tmp/busybox-1.2.0/include/config/config/busybox/exec/path.h
+
+/tmp/busybox-1.2.0/shell/cmdedit.o: /tmp/busybox-1.2.0/shell/cmdedit.h \
+   /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/fancy/prompt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/username/completion.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/tab/completion.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/savehistory.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/history.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing/vi.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/command/editing.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing.h \
+   /tmp/busybox-1.2.0/include/config/config/ash.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/config/locale/support.h
+
+/tmp/busybox-1.2.0/shell/ash.o: /tmp/busybox-1.2.0/shell/cmdedit.h \
+   /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/fancy/prompt.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/tab/completion.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/savehistory.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing/vi.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/command/editing.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/standalone/shell.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/sh/extra/quiet.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/expand/prmt.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/random/support.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/optimize/for/size.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/mail.h \
+   /tmp/busybox-1.2.0/include/config/enable/ash/cmdcmd.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/cmdcmd.h \
+   /tmp/busybox-1.2.0/include/config/enable/ash/builtin/test.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/builtin/test.h \
+   /tmp/busybox-1.2.0/include/config/enable/ash/builtin/echo.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/builtin/echo.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/getopts.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/math/support_64.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/math/support.h \
+   /tmp/busybox-1.2.0/include/config/enable/ash/alias.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/alias.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/read/timeout.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/read/nchars.h \
+   /tmp/busybox-1.2.0/include/config/enable/ash/job/control.h \
+   /tmp/busybox-1.2.0/include/config/config/ash/job/control.h \
+   /tmp/busybox-1.2.0/include/config/config/busybox/exec/path.h \
+   /tmp/busybox-1.2.0/include/config/config/locale/support.h
+
+/tmp/busybox-1.2.0/debianutils/pipe_progress.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/debianutils/which.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/debianutils/start_stop_daemon.o: /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/start/stop/daemon/long/options.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/start/stop/daemon/fancy.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/start/stop/daemon/fancy.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/start/stop/daemon/fancy.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/debianutils/readlink.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/readlink/follow.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/debianutils/mktemp.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/debianutils/run_parts.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/setkeycodes.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/dumpkmap.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/setconsole.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/setconsole/long/options.h
+
+/tmp/busybox-1.2.0/console-tools/setlogcons.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/reset.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/loadfont.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/chvt.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/clear.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/loadkmap.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/openvt.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/console-tools/deallocvt.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/modutils/lsmod.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/query/module/interface.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/check/tainted/module.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/lsmod/pretty_2_6/output.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/modutils/rmmod.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/query/module/interface.h \
+   /tmp/busybox-1.2.0/include/config/config/feature_2_6/modules.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature_2_4/modules.h
+
+/tmp/busybox-1.2.0/modutils/modprobe.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature_2_6/modules.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature_2_4/modules.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/modprobe/multiple/options.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/modutils/insmod.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature_2_6/modules.h \
+   /tmp/busybox-1.2.0/include/config/config/feature_2_4/modules.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/check/tainted/module.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/check/tainted/module.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/insmod/load/map/full.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/insmod/load/map.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/insmod/loadinkmem.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/insmod/ksymoops/symbols.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/insmod/version/checking.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/sysklogd/logger.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/syslogd.h
+
+/tmp/busybox-1.2.0/sysklogd/klogd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/sysklogd/syslogd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipc/syslog/buffer/size.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipc/syslog.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/remote/log.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/rotate/logfile.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/sysklogd/logread.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/logread/reduced/locking.h
+
+/tmp/busybox-1.2.0/archival/uncompress.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/rpm.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/dpkg_deb.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/deb/tar/bz2.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/deb/tar/gz.h
+
+/tmp/busybox-1.2.0/archival/ar.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/unzip.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/unlzma.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/gzip.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/gunzip.h
+
+/tmp/busybox-1.2.0/archival/gunzip.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/gunzip/uncompress.h
+
+/tmp/busybox-1.2.0/archival/dpkg.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/deb/tar/bz2.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/deb/tar/gz.h
+
+/tmp/busybox-1.2.0/archival/tar.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/long/options.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/long/options.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/compress.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/compress.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/gzip.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/gzip.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/from.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/from.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/lzma.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/lzma.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/bzip2.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/bzip2.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tar/create.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/create.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/archival/bunzip2.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/cpio.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/archival/rpm2cpio.o: /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/iptunnel.o: /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/fakeidentd.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/nameif.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/networking/interface.o: /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/networking/ipaddr.o: /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/wget.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/wget/ip6/literal.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/wget/authentication.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/wget/statusbar.h
+
+/tmp/busybox-1.2.0/networking/ip.o: /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ip/tunnel.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ip/route.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ip/link.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ip/address.h
+
+/tmp/busybox-1.2.0/networking/nslookup.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/tftp.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/debug/tftp.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/tftp/blocksize.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tftp/blocksize.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tftp/put.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tftp/put.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/tftp/get.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tftp/get.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/networking/dnsd.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/ifupdown.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifupdown/mapping.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ifupdown/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifupdown/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ifupdown/ipv4.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifupdown/ipv4.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifupdown/ip.h
+
+/tmp/busybox-1.2.0/networking/ether-wake.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/route.o: /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/networking/telnetd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/telnetd/inetd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/config/login.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/devpts.h
+
+/tmp/busybox-1.2.0/networking/nc.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/nc/gaping/security/hole.h
+
+/tmp/busybox-1.2.0/networking/inetd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/inetd/rpc.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/inetd/support/builtin/chargen.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/inetd/support/builtin/daytime.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/inetd/support/builtin/time.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/inetd/support/builtin/discard.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/inetd/support/builtin/echo.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h
+
+/tmp/busybox-1.2.0/networking/zcip.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/traceroute.o: /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/traceroute/use/icmp.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/traceroute/source/route.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/traceroute/verbose.h
+
+/tmp/busybox-1.2.0/networking/hostname.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/clean/up.h
+
+/tmp/busybox-1.2.0/networking/arping.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/netstat.o: /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/pwd_.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/route.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h
+
+/tmp/busybox-1.2.0/networking/ftpgetput.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ftpgetput/long/options.h \
+   /tmp/busybox-1.2.0/include/config/enable/ftpput.h \
+   /tmp/busybox-1.2.0/include/config/enable/ftpget.h
+
+/tmp/busybox-1.2.0/networking/ping6.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/ping6.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/ping.h
+
+/tmp/busybox-1.2.0/networking/httpd.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/httpd/encode/url/str.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/encode/url/str.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/encode/url/str.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/set/remote/port/to/env.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/config/with/script/interpr.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/cgi.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/cgi.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/config/with/mime/types.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/httpd/auth/md5.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/auth/md5.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/auth/md5.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/httpd/basic/auth.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/basic/auth.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/basic/auth.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/httpd/setuid.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/setuid.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/setuid.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/reload/config/sighup.h \
+   /tmp/busybox-1.2.0/include/config/skip/feature/httpd/without/inetd.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/httpd/without/inetd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/httpd/without/inetd.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/networking/ifconfig.o: /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/broadcast/plus.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/hw.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/memstart/ioaddr/irq.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/slip.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ifconfig/status.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipv6.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/networking/iplink.o: /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/iproute.o: /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/telnet.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/telnet/autologin.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/telnet/ttype.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/autowidth.h
+
+/tmp/busybox-1.2.0/networking/ipcalc.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ipcalc/long/options.h \
+   /tmp/busybox-1.2.0/include/config/use/feature/ipcalc/fancy.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/ipcalc/fancy.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ipcalc/fancy.h
+
+/tmp/busybox-1.2.0/networking/vconfig.o: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/ping.o: /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/ping6.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/fancy/ping.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/scripts/usage.o: /tmp/busybox-1.2.0/include/applets.h \
+   /tmp/busybox-1.2.0/include/usage.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/scripts/config/mconf.o: /tmp/busybox-1.2.0/scripts/config/lkc.h \
+   /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/menu.o: /tmp/busybox-1.2.0/scripts/config/lkc.h
+
+/tmp/busybox-1.2.0/scripts/config/symbol.o: /tmp/busybox-1.2.0/scripts/config/lkc.h
+
+/tmp/busybox-1.2.0/scripts/config/util.o: /tmp/busybox-1.2.0/scripts/config/lkc.h
+
+/tmp/busybox-1.2.0/scripts/config/lkc.h: /tmp/busybox-1.2.0/scripts/config/lkc_proto.h \
+   /tmp/busybox-1.2.0/scripts/config/expr.h
+
+/tmp/busybox-1.2.0/scripts/config/expr.o: /tmp/busybox-1.2.0/scripts/config/lkc.h
+
+/tmp/busybox-1.2.0/scripts/config/confdata.o: /tmp/busybox-1.2.0/scripts/config/lkc.h
+
+/tmp/busybox-1.2.0/scripts/config/conf.o: /tmp/busybox-1.2.0/scripts/config/lkc.h
+
+/tmp/busybox-1.2.0/networking/udhcp/clientpacket.o: /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpc.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/clientpacket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/options.h: /tmp/busybox-1.2.0/networking/udhcp/packet.h
+
+/tmp/busybox-1.2.0/networking/udhcp/arpping.o: /tmp/busybox-1.2.0/networking/udhcp/arpping.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/script.o: /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpc.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/pidfile.o: /tmp/busybox-1.2.0/networking/udhcp/pidfile.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h
+
+/tmp/busybox-1.2.0/networking/udhcp/packet.o: /tmp/busybox-1.2.0/networking/udhcp/packet.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/clientpacket.h: /tmp/busybox-1.2.0/networking/udhcp/packet.h
+
+/tmp/busybox-1.2.0/networking/udhcp/leases.o: /tmp/busybox-1.2.0/networking/udhcp/static_leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/files.h \
+   /tmp/busybox-1.2.0/networking/udhcp/arpping.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/dhcpc.o: /tmp/busybox-1.2.0/networking/udhcp/signalpipe.h \
+   /tmp/busybox-1.2.0/networking/udhcp/socket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/clientsocket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpc.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/clientpacket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/networking/udhcp/dhcpd.o: /tmp/busybox-1.2.0/networking/udhcp/serverpacket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/signalpipe.h \
+   /tmp/busybox-1.2.0/networking/udhcp/socket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/static_leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/files.h \
+   /tmp/busybox-1.2.0/networking/udhcp/arpping.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/udhcp/debug.h
+
+/tmp/busybox-1.2.0/networking/udhcp/static_leases.o: /tmp/busybox-1.2.0/networking/udhcp/static_leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/udhcp/debug.h
+
+/tmp/busybox-1.2.0/networking/udhcp/dhcpc.h: /tmp/busybox-1.2.0/networking/udhcp/libbb_udhcp.h
+
+/tmp/busybox-1.2.0/networking/udhcp/dhcpd.h: /tmp/busybox-1.2.0/networking/udhcp/libbb_udhcp.h \
+   /tmp/busybox-1.2.0/networking/udhcp/leases.h
+
+/tmp/busybox-1.2.0/networking/udhcp/static_leases.h: /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/signalpipe.o: /tmp/busybox-1.2.0/networking/udhcp/signalpipe.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h
+
+/tmp/busybox-1.2.0/networking/udhcp/serverpacket.o: /tmp/busybox-1.2.0/networking/udhcp/serverpacket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/static_leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/libbb_udhcp.h: /tmp/busybox-1.2.0/networking/udhcp/packet.h \
+   /tmp/busybox-1.2.0/include/busybox.h \
+   /tmp/busybox-1.2.0/include/config/config/install/no/usr.h
+
+/tmp/busybox-1.2.0/networking/udhcp/files.o: /tmp/busybox-1.2.0/networking/udhcp/static_leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/files.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/udhcp/debug.h
+
+/tmp/busybox-1.2.0/networking/udhcp/dumpleases.o: /tmp/busybox-1.2.0/networking/udhcp/libbb_udhcp.h \
+   /tmp/busybox-1.2.0/networking/udhcp/leases.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/serverpacket.h: /tmp/busybox-1.2.0/networking/udhcp/packet.h
+
+/tmp/busybox-1.2.0/networking/udhcp/clientsocket.o: /tmp/busybox-1.2.0/networking/udhcp/clientsocket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h
+
+/tmp/busybox-1.2.0/networking/udhcp/common.o: /tmp/busybox-1.2.0/networking/udhcp/pidfile.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/udhcp/syslog.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/udhcp/syslog.h \
+   /tmp/busybox-1.2.0/include/config/bb/ver.h
+
+/tmp/busybox-1.2.0/networking/udhcp/socket.o: /tmp/busybox-1.2.0/networking/udhcp/socket.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h
+
+/tmp/busybox-1.2.0/networking/udhcp/options.o: /tmp/busybox-1.2.0/networking/udhcp/files.h \
+   /tmp/busybox-1.2.0/networking/udhcp/common.h \
+   /tmp/busybox-1.2.0/networking/udhcp/options.h \
+   /tmp/busybox-1.2.0/networking/udhcp/dhcpd.h
+
+/tmp/busybox-1.2.0/networking/udhcp/common.h: /tmp/busybox-1.2.0/networking/udhcp/libbb_udhcp.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/udhcp/debug.h
+
+/tmp/busybox-1.2.0/networking/libiproute/iptunnel.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/rtm_map.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h
+
+/tmp/busybox-1.2.0/networking/libiproute/utils.o: /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/inet_common.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ll_addr.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ll_map.o: /tmp/busybox-1.2.0/networking/libiproute/ll_map.h \
+   /tmp/busybox-1.2.0/networking/libiproute/libnetlink.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/utils.h: /tmp/busybox-1.2.0/networking/libiproute/rtm_map.h \
+   /tmp/busybox-1.2.0/networking/libiproute/ll_map.h \
+   /tmp/busybox-1.2.0/networking/libiproute/libnetlink.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/rt_names.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ipaddress.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ip_common.h: /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/networking/libiproute/iplink.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/iproute.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ip_parse_common_args.o: /tmp/busybox-1.2.0/networking/libiproute/ip_common.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ll_proto.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h \
+   /tmp/busybox-1.2.0/networking/libiproute/utils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/networking/libiproute/ll_types.o: /tmp/busybox-1.2.0/networking/libiproute/rt_names.h
+
+/tmp/busybox-1.2.0/networking/libiproute/libnetlink.o: /tmp/busybox-1.2.0/networking/libiproute/libnetlink.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/data_extract_to_buffer.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/data_skip.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/get_header_cpio.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/unpack_ar_archive.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/data_extract_to_stdout.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/get_header_ar.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/ar/long/filenames.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/decompress_bunzip2.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/init_handle.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/check_header_gzip.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/get_header_tar_lzma.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/open_transformer.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/header_list.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/data_align.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/header_verbose_list.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/archive_xread_all.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/get_header_tar.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/gnu/extensions.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/tar/oldgnu/compatibility.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/filter_accept_list.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/decompress_uncompress.o: /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/get_header_tar_bz2.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/seek_by_jump.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/unarchive/tape.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/seek_by_char.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/header_skip.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/filter_accept_reject_list.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/archive_xread_all_eof.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/decompress_unzip.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/decompress_unlzma.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/lzma/fast.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/clean/up.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/filter_accept_list_reassign.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h \
+   /tmp/busybox-1.2.0/include/config/enable/feature/deb/tar/lzma.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/deb/tar/bz2.h \
+   /tmp/busybox-1.2.0/include/config/config/feature/deb/tar/gz.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/data_extract_all.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/find_list_entry.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/filter_accept_all.o: /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/archival/libunarchive/get_header_tar_gz.o: /tmp/busybox-1.2.0/include/libbb.h \
+   /tmp/busybox-1.2.0/include/unarchive.h
+
+/tmp/busybox-1.2.0/coreutils/libcoreutils/cp_mv_stat.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/coreutils/libcoreutils/getopt_mk_fifo_nod.o: /tmp/busybox-1.2.0/coreutils/libcoreutils/coreutils.h \
+   /tmp/busybox-1.2.0/include/libbb.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/read_bb_file.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/bitmaps.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/test_io.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/bmove.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/getsize.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/alloc_tables.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/expanddir.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/bmap.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/bitops.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_err.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_io.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_types.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/dupfs.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/kernel-jbd.h: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/badblocks.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/getsectsize.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/inode_io.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/bb_compat.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/valid_blk.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/newdir.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/namei.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/openfs.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/e2image.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/inode.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/e2image.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/bitops.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/initialize.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/icount.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/bb_inode.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/rw_bitmaps.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/e2image.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/freefs.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/inline.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/dirhash.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/flushb.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/version.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/res_gdt.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/get_pathname.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/dirblock.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext_attr.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_ext_attr.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/block.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/write_bb_file.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/unlink.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/io_manager.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/brel_ma.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/brel.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/mkjournal.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/kernel-jbd.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2fsck.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ismounted.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/irel_ma.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/irel.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs_inline.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/bitops.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/check_desc.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/dblist_dir.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_types.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/rs_bitmap.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/dir_iterate.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/closefs.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/cmp_bitmaps.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/swapfs.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_ext_attr.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/imager.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/gen_bitmap.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/mkdir.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/fileio.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/alloc_stats.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/lookup.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/unix_io.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/alloc_sb.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_io.h: /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/read_bb.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/finddev.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/dblist.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/ind_block.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/alloc.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/link.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fs.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/ext2fs/sparse.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2fsP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/gen_uuid.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/pack.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/uuid_time.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/unpack.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/compare.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/parse.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuid.h
+
+/tmp/busybox-1.2.0/e2fsprogs/uuid/unparse.o: /tmp/busybox-1.2.0/e2fsprogs/uuid/uuidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/ostype.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/ls.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/fgetsetflags.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/ps.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/fgetsetversion.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/mntopts.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/pe.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/pf.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/uuid.o: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_types.h \
+   /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/parse_num.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h: /tmp/busybox-1.2.0/e2fsprogs/ext2fs/ext2_fs.h \
+   /tmp/busybox-1.2.0/include/busybox.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/feature.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/iod.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/e2p/hashstr.o: /tmp/busybox-1.2.0/e2fsprogs/e2p/e2p.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/devname.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/dev.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/save.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/blkid_getsize.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/resolve.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/probe.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/cache.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/version.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkid.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/probe.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/probe.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/uuid/uuid.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h: /tmp/busybox-1.2.0/e2fsprogs/blkid/list.h \
+   /tmp/busybox-1.2.0/e2fsprogs/blkid/blkid.h \
+   /tmp/busybox-1.2.0/include/config/config/lfs.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/devno.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/read.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h \
+   /tmp/busybox-1.2.0/e2fsprogs/uuid/uuid.h
+
+/tmp/busybox-1.2.0/e2fsprogs/blkid/tag.o: /tmp/busybox-1.2.0/e2fsprogs/blkid/blkidP.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/inputbox.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/msgbox.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/checklist.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/menubox.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/textbox.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/util.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/colors.h \
+   /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h
+
+/tmp/busybox-1.2.0/scripts/config/lxdialog/yesno.o: /tmp/busybox-1.2.0/scripts/config/lxdialog/dialog.h

@@ -40,15 +40,16 @@ RB_AUTOBOOT
 	if (flags&1) sleep(atoi(delay));
 	if (!(flags&2)) sync();
 
-	/* Perform action. */
-	if (ENABLE_INIT && !(flags & 4)) {
-/*		if (ENABLE_FEATURE_INITRD) {
-			long *pidlist=find_pid_by_name("linuxrc");
-			if (*pidlist>0) rc = kill(*pidlist,signals[which]);
-			if (ENABLE_FEATURE_CLEAN_UP) free(pidlist);
-		}
-*/		if (rc) rc = kill(1,signals[which]);
-	} else rc = reboot(magic[which],NULL);
+	(void) signal(SIGHUP, SIG_IGN);	
+	(void) signal(SIGTSTP, SIG_IGN);
+	(void) signal(SIGTTIN, SIG_IGN);
+	(void) signal(SIGTTOU, SIG_IGN);
+	(void) signal(SIGPIPE, SIG_IGN);
+	(void) signal(SIGTERM, SIG_IGN);
+
+	(void) kill(1, SIGHUP);
+	sleep(2);		
+	rc = reboot(magic[which],NULL);
 
 	if (rc) bb_error_msg("No.");
 	return rc;

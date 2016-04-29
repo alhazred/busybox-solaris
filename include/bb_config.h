@@ -5,7 +5,7 @@
  */
 
 /* Version Number */
-#define BB_VER "1.2.0"
+#define BB_VER "1.2.0-solaris"
 #define BB_BT "2009.04.20-10:06+0000"
 
 #define HAVE_DOT_CONFIG 1

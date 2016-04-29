@@ -26,6 +26,10 @@ endif
 endif
 
 INIT-$(CONFIG_INIT_SHARED)        += init_shared.o
+CFLAGS  += -Wno-parentheses
+CFLAGS  += -Wno-uninitialized
+CFLAGS  += -Wno-strict-prototypes
+CFLAGS  += -Wno-unused-function
 
 ifneq ($(strip $(INIT-y)),)
 libraries-y+=$(INIT_DIR)$(INIT_AR)

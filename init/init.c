@@ -20,8 +20,13 @@
  */
 
 /*
- * Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
- * Use is subject to license terms.
+ * Copyright (c) 2013 Gary Mills
+ *
+ * Copyright (c) 1988, 2010, Oracle and/or its affiliates. All rights reserved.
+ */
+
+/*
+ * Copyright (c) 2007-2008 NEC Corporation
  */
 
 /*	Copyright (c) 1984, 1986, 1987, 1988, 1989 AT&T	*/
@@ -140,6 +145,7 @@
 #define	FALSE	0
 #define	FAILURE	-1
 
+#define	UT_USER_SZ	32	/* Size of a utmpx ut_user field */
 #define	UT_LINE_SZ	32	/* Size of a utmpx ut_line field */
 
 /*
@@ -553,10 +559,8 @@ static uint_t	startd_failure_index;
 
 static char	*prog_name(char *);
 static int	state_to_mask(int);
+static int	mask_to_state(int);
 static int	lvlname_to_mask(char, int *);
-static void	lscf_set_runlevel(char);
-static int	state_to_flags(int);
-static char	state_to_name(int);
 static int	lvlname_to_state(char);
 static int	getcmd(struct CMD_LINE *, char *);
 static int	realcon();
@@ -597,7 +601,6 @@ static void	startd_record_failure();
 static int	startd_failure_rate_critical();
 static char	*audit_boot_msg();
 static int	audit_put_record(int, int, char *);
-static void	update_boot_archive(int new_state);
 
 int
 init_main(int argc, char *argv[])
@@ -695,10 +698,8 @@ init_main(int argc, char *argv[])
 		    "\n\n%s Release %s Version %s %d-bit\r\n",
 		    un.sysname, un.release, un.version, bits);
 		console(B_FALSE,
-		    "Copyright 1983-2009 Sun Microsystems, Inc. "
+		    "Copyright (c) 1983, 2010, Oracle and/or its affiliates."
 		    " All rights reserved.\r\n");
-		console(B_FALSE,
-		    "Use is subject to license terms.\r\n");
 	}
 
 	/*
@@ -744,6 +745,7 @@ init_main(int argc, char *argv[])
 	prev_state = prior_state = cur_state;
 
 	setup_pipe();
+	prev_state = 0;
 
 	/*
 	 * Here is the beginning of the main process loop.
@@ -775,13 +777,6 @@ init_main(int argc, char *argv[])
 		 */
 		if (chg_lvl_flag) {
 			chg_lvl_flag = FALSE;
-
-			if (state_to_flags(cur_state) & LSEL_RUNLEVEL) {
-				char rl = state_to_name(cur_state);
-
-				if (rl != -1)
-					lscf_set_runlevel(rl);
-			}
 
 			may_need_audit = 1;
 		}
@@ -914,18 +909,6 @@ init_main(int argc, char *argv[])
 	/*NOTREACHED*/
 }
 
-static void
-update_boot_archive(int new_state)
-{
-	if (new_state != LVL0 && new_state != LVL5 && new_state != LVL6)
-		return;
-
-	if (getzoneid() != GLOBAL_ZONEID)
-		return;
-
-	(void) system("/sbin/bootadm -ea update_all");
-}
-
 /*
  * void enter_maintenance()
  *   A simple invocation of sulogin(1M), with no baggage, in the case that we
@@ -939,10 +922,10 @@ enter_maintenance()
 
 	console(B_FALSE, "Requesting maintenance mode\n"
 	    "(See /lib/svc/share/README for additional information.)\n");
-	(void) sigset(SIGCLD, SIG_DFL);
+	(void) sighold(SIGCLD);
 	while ((su_process = efork(M_OFF, NULLPROC, NOCLEANUP)) == NO_ROOM)
 		(void) pause();
-	(void) sigset(SIGCLD, childeath);
+	(void) sigrelse(SIGCLD);
 	if (su_process == NULLPROC) {
 		int fd;
 
@@ -1394,7 +1377,7 @@ spawn(struct PROC_TABLE *process, struct CMD_LINE *cmd)
 	/*
 	 * Spawn a child process to execute this command.
 	 */
-	(void) sigset(SIGCLD, SIG_DFL);
+	(void) sighold(SIGCLD);
 	oprocess = process;
 	while ((process = efork(cmd->c_action, oprocess, modes)) == NO_ROOM)
 		(void) pause();
@@ -1453,7 +1436,7 @@ spawn(struct PROC_TABLE *process, struct CMD_LINE *cmd)
 
 	st_write();
 
-	(void) sigset(SIGCLD, childeath);
+	(void) sigrelse(SIGCLD);
 }
 
 /*
@@ -1606,11 +1589,11 @@ getcmd(struct CMD_LINE *cmd, char *shcmd)
 		for (proceed = TRUE, ptr = shcmd, state = ID, lastc = '\0';
 		    proceed && c != EOF;
 		    lastc = c, c = fgetc(fp_inittab)) {
-		    /* If we're not in the FAILURE state and haven't	*/
-		    /* yet reached the shell command field, process	*/
-		    /* the line, otherwise just look for a real end	*/
-		    /* of line.						*/
-		    if (state != FAILURE && state != COMMAND) {
+			/* If we're not in the FAILURE state and haven't */
+			/* yet reached the shell command field, process	 */
+			/* the line, otherwise just look for a real end	 */
+			/* of line.					 */
+			if (state != FAILURE && state != COMMAND) {
 			/*
 			 * Squeeze out spaces and tabs.
 			 */
@@ -1646,9 +1629,9 @@ getcmd(struct CMD_LINE *cmd, char *shcmd)
 			 * to the next field.
 			 */
 			if (c == ':') {
-			    switch (state) {
+				switch (state) {
 
-			    case ID :
+				case ID :
 				/*
 				 * Check to see that there are only
 				 * 1 to 4 characters for the id.
@@ -1662,7 +1645,7 @@ getcmd(struct CMD_LINE *cmd, char *shcmd)
 				}
 				break;
 
-			    case LEVELS :
+				case LEVELS :
 				/*
 				 * Build a mask for all the levels for
 				 * which this command will be legal.
@@ -1683,7 +1666,7 @@ getcmd(struct CMD_LINE *cmd, char *shcmd)
 				}
 				break;
 
-			    case ACTION :
+				case ACTION :
 				/*
 				 * Null terminate the string in shcmd buffer and
 				 * then try to match against legal actions.  If
@@ -1694,27 +1677,30 @@ getcmd(struct CMD_LINE *cmd, char *shcmd)
 				if (ptr == shcmd) {
 					if (isdigit(cmd->c_id[0]) &&
 					    (cmd->c_id[1] == '\0' ||
-						isdigit(cmd->c_id[1])) &&
+					    isdigit(cmd->c_id[1])) &&
 					    (cmd->c_id[2] == '\0' ||
-						isdigit(cmd->c_id[2])) &&
+					    isdigit(cmd->c_id[2])) &&
 					    (cmd->c_id[3] == '\0' ||
-						isdigit(cmd->c_id[3])))
-						    cmd->c_action = M_RESPAWN;
+					    isdigit(cmd->c_id[3])))
+						cmd->c_action = M_RESPAWN;
 					else
-						    cmd->c_action = M_OFF;
+						cmd->c_action = M_OFF;
 				} else {
-				    for (cmd->c_action = 0, i = 0, *ptr = '\0';
-				    i < sizeof (actions)/sizeof (char *);
-				    i++) {
+					for (cmd->c_action = 0, i = 0,
+					    *ptr = '\0';
+					    i <
+					    sizeof (actions)/sizeof (char *);
+					    i++) {
 					if (strcmp(shcmd, actions[i]) == 0) {
-					    if ((cmd->c_levels & MASKSU) &&
-						!(act_masks[i] & su_acts))
-						    cmd->c_action = 0;
-					    else
-						cmd->c_action = act_masks[i];
-					    break;
+						if ((cmd->c_levels & MASKSU) &&
+						    !(act_masks[i] & su_acts))
+							cmd->c_action = 0;
+						else
+							cmd->c_action =
+							    act_masks[i];
+						break;
 					}
-				    }
+					}
 				}
 
 				/*
@@ -1729,38 +1715,38 @@ getcmd(struct CMD_LINE *cmd, char *shcmd)
 				}
 				ptr = shcmd + EXEC;
 				break;
-			    }
-			    continue;
+				}
+				continue;
 			}
-		    }
+		}
 
-		    /* If the character is a '\n', then this is the end of a */
-		    /* line.  If the '\n' wasn't preceded by a backslash, */
-		    /* it is also the end of an inittab command.  If it was */
-		    /* preceded by a backslash then the next line is a */
-		    /* continuation.  Note that the continuation '\n' falls */
-		    /* through and is treated like other characters and is */
-		    /* stored in the shell command line. */
-		    if (c == '\n' && lastc != '\\') {
-				proceed = FALSE;
-				*ptr = '\0';
-				break;
-		    }
+		/* If the character is a '\n', then this is the end of a */
+		/* line.  If the '\n' wasn't preceded by a backslash, */
+		/* it is also the end of an inittab command.  If it was */
+		/* preceded by a backslash then the next line is a */
+		/* continuation.  Note that the continuation '\n' falls */
+		/* through and is treated like other characters and is */
+		/* stored in the shell command line. */
+		if (c == '\n' && lastc != '\\') {
+			proceed = FALSE;
+			*ptr = '\0';
+			break;
+		}
 
-		    /* For all other characters just stuff them into the */
-		    /* command as long as there aren't too many of them. */
-		    /* Make sure there is room for a terminating '\0' also. */
-		    if (ptr >= shcmd + MAXCMDL - 1)
+		/* For all other characters just stuff them into the */
+		/* command as long as there aren't too many of them. */
+		/* Make sure there is room for a terminating '\0' also. */
+		if (ptr >= shcmd + MAXCMDL - 1)
 			state = FAILURE;
-		    else
+		else
 			*ptr++ = (char)c;
 
-		    /* If the character we just stored was a quoted	*/
-		    /* backslash, then change "c" to '\0', so that this	*/
-		    /* backslash will not cause a subsequent '\n' to appear */
-		    /* quoted.  In otherwords '\' '\' '\n' is the real end */
-		    /* of a command, while '\' '\n' is a continuation. */
-		    if (c == '\\' && lastc == '\\')
+		/* If the character we just stored was a quoted	*/
+		/* backslash, then change "c" to '\0', so that this	*/
+		/* backslash will not cause a subsequent '\n' to appear */
+		/* quoted.  In otherwords '\' '\' '\n' is the real end */
+		/* of a command, while '\' '\n' is a continuation. */
+		if (c == '\\' && lastc == '\\')
 			c = '\0';
 		}
 
@@ -1824,20 +1810,6 @@ lvlname_to_state(char name)
 }
 
 /*
- * state_to_name(): convert the level to the character name.
- */
-static char
-state_to_name(int state)
-{
-	int i;
-	for (i = 0; i < LVL_NELEMS; i++) {
-		if (lvls[i].lvl_state == state)
-			return (lvls[i].lvl_name);
-	}
-	return (-1);
-}
-
-/*
  * state_to_mask(): return the mask corresponding to a signal number
  */
 static int
@@ -1849,6 +1821,20 @@ state_to_mask(int state)
 			return (lvls[i].lvl_mask);
 	}
 	return (0);	/* return 0, since that represents an empty mask */
+}
+
+/*
+ *  * mask_to_state(): return the minimum number corresponding of the state mask.
+ *   */
+static int
+mask_to_state(int mask)
+{
+	int i;
+	for (i = 0; i < LVL_NELEMS; i++) {
+		if (lvls[i].lvl_mask & mask)
+			return (lvls[i].lvl_state);
+	}
+	return SINGLE_USER;	/* return SINGLE_USER as a default state */
 }
 
 /*
@@ -1868,21 +1854,6 @@ lvlname_to_mask(char name, int *mask)
 }
 
 /*
- * state_to_flags(): return the flags corresponding to a runlevel.  These
- * indicate properties of that runlevel.
- */
-static int
-state_to_flags(int state)
-{
-	int i;
-	for (i = 0; i < LVL_NELEMS; i++) {
-		if (lvls[i].lvl_state == state)
-			return (lvls[i].lvl_flags);
-	}
-	return (0);
-}
-
-/*
  * killproc() creates a child which kills the process specified by pid.
  */
 void
@@ -1890,10 +1861,10 @@ killproc(pid_t pid)
 {
 	struct PROC_TABLE	*process;
 
-	(void) sigset(SIGCLD, SIG_DFL);
+	(void) sighold(SIGCLD);
 	while ((process = efork(M_OFF, NULLPROC, 0)) == NO_ROOM)
 		(void) pause();
-	(void) sigset(SIGCLD, childeath);
+	(void) sigrelse(SIGCLD);
 
 	if (process == NULLPROC) {
 		/*
@@ -2065,13 +2036,7 @@ boot_init()
 			(void) snprintf(startd_svc_aux, SVC_AUX_SIZE,
 			    INITTAB_ENTRY_ID_STR_FORMAT, cmd.c_id);
 		} else if (cmd.c_action == M_INITDEFAULT) {
-			/*
-			 * initdefault is no longer meaningful, as the SMF
-			 * milestone controls what (legacy) run level we
-			 * boot to.
-			 */
-			console(B_TRUE,
-			    "Ignoring legacy \"initdefault\" entry.\n");
+			cur_state = mask_to_state(cmd.c_levels);	
 		} else if (cmd.c_action == M_SYSINIT) {
 			/*
 			 * Execute the "sysinit" entry and wait for it to
@@ -2080,7 +2045,7 @@ boot_init()
 			 * until after there has been an chance to check it.
 			 */
 			if (process = findpslot(&cmd)) {
-				(void) sigset(SIGCLD, SIG_DFL);
+				(void) sighold(SIGCLD);
 				(void) snprintf(svc_aux, SVC_AUX_SIZE,
 				    INITTAB_ENTRY_ID_STR_FORMAT, cmd.c_id);
 				(void) snprintf(init_svc_fmri, SVC_FMRI_SIZE,
@@ -2098,7 +2063,7 @@ boot_init()
 				    (NAMED|NOCLEANUP))) == NO_ROOM;
 				    /* CSTYLED */)
 					;
-				(void) sigset(SIGCLD, childeath);
+				(void) sigrelse(SIGCLD);
 
 				if (process == NULLPROC) {
 					maxfiles = ulimit(UL_GDESLIM, 0);
@@ -2113,7 +2078,9 @@ boot_init()
 "Command\n\"%s\"\n failed to execute.  errno = %d (exec of shell failed)\n",
 					    cmd.c_command, errno);
 					exit(1);
-				} else while (waitproc(process) == FAILURE);
+				} else
+					while (waitproc(process) == FAILURE)
+						;
 				process->p_flags = 0;
 				st_write();
 			}
@@ -2135,19 +2102,6 @@ boot_init()
 	 */
 	if (write_ioctl)
 		write_ioctl_syscon();
-
-	/*
-	 * Start svc.startd(1M), which does most of the work.
-	 */
-	if (startd_cline[0] != '\0' && startd_tmpl >= 0) {
-		/* Start svc.startd. */
-		if (startd_run(startd_cline, startd_tmpl, 0) == -1)
-			cur_state = SINGLE_USER;
-	} else {
-		console(B_TRUE, "Absent svc.startd entry or bad "
-		    "contract template.  Not starting svc.startd.\n");
-		enter_maintenance();
-	}
 }
 
 /*
@@ -2355,22 +2309,14 @@ alarmclk()
  * to do and return, otherwise the child will be waited for.
  */
 static void
-childeath_single()
+childeath_single(pid_t pid, int status)
 {
 	struct PROC_TABLE	*process;
 	struct pidlist		*pp;
-	pid_t			pid;
-	int			status;
 
 	/*
-	 * Perform wait to get the process id of the child that died and
-	 * then scan the process table to see if we are interested in
-	 * this process. NOTE: if a super-user sends the SIGCLD signal
-	 * to init, the following wait will not immediately return and
-	 * init will be inoperative until one of its child really does die.
+	 * Scan the process table to see if we are interested in this process.
 	 */
-	pid = wait(&status);
-
 	for (process = proc_table;
 	    (process < proc_table + num_proc); process++) {
 		if ((process->p_flags & (LIVING|OCCUPIED)) ==
@@ -2425,11 +2371,11 @@ childeath_single()
 static void
 childeath(int signo)
 {
-	siginfo_t info;
+	pid_t pid;
+	int status;
 
-	while ((waitid(P_ALL, (id_t)0, &info, WEXITED|WNOHANG|WNOWAIT) == 0) &&
-	    info.si_pid != 0)
-		childeath_single();
+	while ((pid = waitpid(-1, &status, WNOHANG)) > 0)
+		childeath_single(pid, status);
 }
 
 static void
@@ -2448,13 +2394,8 @@ powerfail()
  * otherwise it searches for a free slot.  Regardless of how it was called,
  * it returns the pointer to the proc_table entry
  *
- * The SIGCLD handler is set to default (SIG_DFL) before calling efork().
- * This relies on the somewhat obscure SVR2 SIGCLD/SIG_DFL semantic
- * implied by the use of signal(3c).  While the meaning of SIG_DFL for
- * SIGCLD is nominally to ignore the signal, once the signal disposition
- * is set to childeath(), the kernel will post a SIGCLD if a child
- * exited during the period the disposition was SIG_DFL.  It acts more
- * like a signal block.
+ * The SIGCLD signal is blocked (held) before calling efork()
+ * and is unblocked (released) after efork() returns.
  *
  * Ideally, this should be rewritten to use modern signal semantics.
  */
@@ -2464,7 +2405,6 @@ efork(int action, struct PROC_TABLE *process, int modes)
 	pid_t	childpid;
 	struct PROC_TABLE *proc;
 	int		i;
-	void (*oldroutine)();
 	/*
 	 * Freshen up the proc_table, removing any entries for dead processes
 	 * that don't have NOCLEANUP set.  Perform the necessary accounting.
@@ -2494,13 +2434,13 @@ efork(int action, struct PROC_TABLE *process, int modes)
 		setimer(5);
 
 		/*
-		 * Wait for some children to die.  Since efork() is normally
-		 * called with SIGCLD in the default state, reset it to catch
-		 * so that child death signals can come in.
+		 * Wait for some children to die.  Since efork()
+		 * is always called with SIGCLD blocked, unblock
+		 * it here so that child death signals can come in.
 		 */
-		oldroutine = sigset(SIGCLD, childeath);
+		(void) sigrelse(SIGCLD);
 		(void) pause();
-		(void) sigset(SIGCLD, oldroutine);
+		(void) sighold(SIGCLD);
 		setimer(0);
 	}
 
@@ -2825,8 +2765,7 @@ static char *
 prog_name(char *string)
 {
 	char	*ptr, *ptr2;
-	/* XXX - utmp - fix name length */
-	static char word[_POSIX_LOGIN_NAME_MAX];
+	static char word[UT_USER_SZ + 1];
 
 	/*
 	 * Search for the first word skipping leading spaces and tabs.
@@ -2851,7 +2790,7 @@ prog_name(char *string)
 	 * '/', thus when a ' ', '\t', '\n', or '\0' is found, "ptr" will
 	 * point to the last element of the pathname.
 	 */
-	for (ptr = string; *string != ' ' && *string != '\t' && 
+	for (ptr = string; *string != ' ' && *string != '\t' &&
 	    *string != '\n' && *string != '\0'; string++) {
 		if (*string == '/')
 			ptr = string+1;
@@ -2861,8 +2800,7 @@ prog_name(char *string)
 	 * Copy out up to the size of the "ut_user" array into "word",
 	 * null terminate it and return a pointer to it.
 	 */
-	/* XXX - utmp - fix name length */
-	for (ptr2 = &word[0]; ptr2 < &word[_POSIX_LOGIN_NAME_MAX - 1] &&
+	for (ptr2 = &word[0]; ptr2 < &word[UT_USER_SZ] &&
 	    ptr < string; /* CSTYLED */)
 		*ptr2++ = *ptr++;
 
@@ -2914,22 +2852,22 @@ get_ioctl_syscon()
 		    IOCTLSYSCON);
 	} else {
 
-	    i = fscanf(fp,
+		i = fscanf(fp,
 	    "%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x",
-		&iflags, &oflags, &cflags, &lflags,
-		&cc[0], &cc[1], &cc[2], &cc[3], &cc[4], &cc[5], &cc[6],
-		&cc[7], &cc[8], &cc[9], &cc[10], &cc[11], &cc[12], &cc[13],
-		&cc[14], &cc[15], &cc[16], &cc[17]);
+		    &iflags, &oflags, &cflags, &lflags,
+		    &cc[0], &cc[1], &cc[2], &cc[3], &cc[4], &cc[5], &cc[6],
+		    &cc[7], &cc[8], &cc[9], &cc[10], &cc[11], &cc[12], &cc[13],
+		    &cc[14], &cc[15], &cc[16], &cc[17]);
 
-	    if (i == 22) {
-		stored_syscon_termios.c_iflag = iflags;
-		stored_syscon_termios.c_oflag = oflags;
-		stored_syscon_termios.c_cflag = cflags;
-		stored_syscon_termios.c_lflag = lflags;
-		for (i = 0; i < 18; i++)
-			stored_syscon_termios.c_cc[i] = (char)cc[i];
-		valid_format = 1;
-	    } else if (i == 13) {
+		if (i == 22) {
+			stored_syscon_termios.c_iflag = iflags;
+			stored_syscon_termios.c_oflag = oflags;
+			stored_syscon_termios.c_cflag = cflags;
+			stored_syscon_termios.c_lflag = lflags;
+			for (i = 0; i < 18; i++)
+				stored_syscon_termios.c_cc[i] = (char)cc[i];
+			valid_format = 1;
+		} else if (i == 13) {
 		rewind(fp);
 		i = fscanf(fp, "%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x",
 		    &iflags, &oflags, &cflags, &lflags, &ldisc, &cc[0], &cc[1],
@@ -2946,12 +2884,12 @@ get_ioctl_syscon()
 		for (i = 0; i < 8; i++)
 			stored_syscon_termios.c_cc[i] = (char)cc[i];
 		valid_format = 1;
-	    }
-	    (void) fclose(fp);
+		}
+		(void) fclose(fp);
 
-	    /* If the file is badly formatted, use the default settings. */
-	    if (!valid_format)
-		stored_syscon_termios = dflt_termios;
+		/* If the file is badly formatted, use the default settings. */
+		if (!valid_format)
+			stored_syscon_termios = dflt_termios;
 	}
 
 	/* If the file had a bad format, rewrite it later. */
@@ -3065,461 +3003,6 @@ setimer(int timelimit)
 }
 
 /*
- * Fails with
- *   ENOMEM - out of memory
- *   ECONNABORTED - repository connection broken
- *   EPERM - permission denied
- *   EACCES - backend access denied
- *   EROFS - backend readonly
- */
-static int
-get_or_add_startd(scf_instance_t *inst)
-{
-	scf_handle_t *h;
-	scf_scope_t *scope = NULL;
-	scf_service_t *svc = NULL;
-	int ret = 0;
-
-	h = scf_instance_handle(inst);
-
-	if (scf_handle_decode_fmri(h, SCF_SERVICE_STARTD, NULL, NULL, inst,
-	    NULL, NULL, SCF_DECODE_FMRI_EXACT) == 0)
-		return (0);
-
-	switch (scf_error()) {
-	case SCF_ERROR_CONNECTION_BROKEN:
-		return (ECONNABORTED);
-
-	case SCF_ERROR_NOT_FOUND:
-		break;
-
-	case SCF_ERROR_HANDLE_MISMATCH:
-	case SCF_ERROR_INVALID_ARGUMENT:
-	case SCF_ERROR_CONSTRAINT_VIOLATED:
-	default:
-		bad_error("scf_handle_decode_fmri", scf_error());
-	}
-
-	/* Make sure we're right, since we're adding piece-by-piece. */
-	assert(strcmp(SCF_SERVICE_STARTD,
-	    "svc:/system/svc/restarter:default") == 0);
-
-	if ((scope = scf_scope_create(h)) == NULL ||
-	    (svc = scf_service_create(h)) == NULL) {
-		ret = ENOMEM;
-		goto out;
-	}
-
-get_scope:
-	if (scf_handle_get_scope(h, SCF_SCOPE_LOCAL, scope) != 0) {
-		switch (scf_error()) {
-		case SCF_ERROR_CONNECTION_BROKEN:
-			ret = ECONNABORTED;
-			goto out;
-
-		case SCF_ERROR_NOT_FOUND:
-			(void) fputs(gettext(
-			    "smf(5) repository missing local scope.\n"),
-			    stderr);
-			exit(1);
-			/* NOTREACHED */
-
-		case SCF_ERROR_HANDLE_MISMATCH:
-		case SCF_ERROR_INVALID_ARGUMENT:
-		default:
-			bad_error("scf_handle_get_scope", scf_error());
-		}
-	}
-
-get_svc:
-	if (scf_scope_get_service(scope, "system/svc/restarter", svc) != 0) {
-		switch (scf_error()) {
-		case SCF_ERROR_CONNECTION_BROKEN:
-			ret = ECONNABORTED;
-			goto out;
-
-		case SCF_ERROR_DELETED:
-			goto get_scope;
-
-		case SCF_ERROR_NOT_FOUND:
-			break;
-
-		case SCF_ERROR_HANDLE_MISMATCH:
-		case SCF_ERROR_INVALID_ARGUMENT:
-		case SCF_ERROR_NOT_SET:
-		default:
-			bad_error("scf_scope_get_service", scf_error());
-		}
-
-add_svc:
-		if (scf_scope_add_service(scope, "system/svc/restarter", svc) !=
-		    0) {
-			switch (scf_error()) {
-			case SCF_ERROR_CONNECTION_BROKEN:
-				ret = ECONNABORTED;
-				goto out;
-
-			case SCF_ERROR_EXISTS:
-				goto get_svc;
-
-			case SCF_ERROR_PERMISSION_DENIED:
-				ret = EPERM;
-				goto out;
-
-			case SCF_ERROR_BACKEND_ACCESS:
-				ret = EACCES;
-				goto out;
-
-			case SCF_ERROR_BACKEND_READONLY:
-				ret = EROFS;
-				goto out;
-
-			case SCF_ERROR_HANDLE_MISMATCH:
-			case SCF_ERROR_INVALID_ARGUMENT:
-			case SCF_ERROR_NOT_SET:
-			default:
-				bad_error("scf_scope_add_service", scf_error());
-			}
-		}
-	}
-
-get_inst:
-	if (scf_service_get_instance(svc, "default", inst) != 0) {
-		switch (scf_error()) {
-		case SCF_ERROR_CONNECTION_BROKEN:
-			ret = ECONNABORTED;
-			goto out;
-
-		case SCF_ERROR_DELETED:
-			goto add_svc;
-
-		case SCF_ERROR_NOT_FOUND:
-			break;
-
-		case SCF_ERROR_HANDLE_MISMATCH:
-		case SCF_ERROR_INVALID_ARGUMENT:
-		case SCF_ERROR_NOT_SET:
-		default:
-			bad_error("scf_service_get_instance", scf_error());
-		}
-
-		if (scf_service_add_instance(svc, "default", inst) !=
-		    0) {
-			switch (scf_error()) {
-			case SCF_ERROR_CONNECTION_BROKEN:
-				ret = ECONNABORTED;
-				goto out;
-
-			case SCF_ERROR_DELETED:
-				goto add_svc;
-
-			case SCF_ERROR_EXISTS:
-				goto get_inst;
-
-			case SCF_ERROR_PERMISSION_DENIED:
-				ret = EPERM;
-				goto out;
-
-			case SCF_ERROR_BACKEND_ACCESS:
-				ret = EACCES;
-				goto out;
-
-			case SCF_ERROR_BACKEND_READONLY:
-				ret = EROFS;
-				goto out;
-
-			case SCF_ERROR_HANDLE_MISMATCH:
-			case SCF_ERROR_INVALID_ARGUMENT:
-			case SCF_ERROR_NOT_SET:
-			default:
-				bad_error("scf_service_add_instance",
-				    scf_error());
-			}
-		}
-	}
-
-	ret = 0;
-
-out:
-	scf_service_destroy(svc);
-	scf_scope_destroy(scope);
-	return (ret);
-}
-
-/*
- * Fails with
- *   ECONNABORTED - repository connection broken
- *   ECANCELED - the transaction's property group was deleted
- */
-static int
-transaction_add_set(scf_transaction_t *tx, scf_transaction_entry_t *ent,
-    const char *pname, scf_type_t type)
-{
-change_type:
-	if (scf_transaction_property_change_type(tx, ent, pname, type) == 0)
-		return (0);
-
-	switch (scf_error()) {
-	case SCF_ERROR_CONNECTION_BROKEN:
-		return (ECONNABORTED);
-
-	case SCF_ERROR_DELETED:
-		return (ECANCELED);
-
-	case SCF_ERROR_NOT_FOUND:
-		goto new;
-
-	case SCF_ERROR_HANDLE_MISMATCH:
-	case SCF_ERROR_INVALID_ARGUMENT:
-	case SCF_ERROR_NOT_BOUND:
-	case SCF_ERROR_NOT_SET:
-	default:
-		bad_error("scf_transaction_property_change_type", scf_error());
-	}
-
-new:
-	if (scf_transaction_property_new(tx, ent, pname, type) == 0)
-		return (0);
-
-	switch (scf_error()) {
-	case SCF_ERROR_CONNECTION_BROKEN:
-		return (ECONNABORTED);
-
-	case SCF_ERROR_DELETED:
-		return (ECANCELED);
-
-	case SCF_ERROR_EXISTS:
-		goto change_type;
-
-	case SCF_ERROR_HANDLE_MISMATCH:
-	case SCF_ERROR_INVALID_ARGUMENT:
-	case SCF_ERROR_NOT_BOUND:
-	case SCF_ERROR_NOT_SET:
-	default:
-		bad_error("scf_transaction_property_new", scf_error());
-		/* NOTREACHED */
-	}
-}
-
-static void
-scferr(void)
-{
-	switch (scf_error()) {
-	case SCF_ERROR_NO_MEMORY:
-		console(B_TRUE, gettext("Out of memory.\n"));
-		break;
-
-	case SCF_ERROR_CONNECTION_BROKEN:
-		console(B_TRUE, gettext(
-		    "Connection to smf(5) repository server broken.\n"));
-		break;
-
-	case SCF_ERROR_NO_RESOURCES:
-		console(B_TRUE, gettext(
-		    "smf(5) repository server is out of memory.\n"));
-		break;
-
-	case SCF_ERROR_PERMISSION_DENIED:
-		console(B_TRUE, gettext("Insufficient privileges.\n"));
-		break;
-
-	default:
-		console(B_TRUE, gettext("libscf error: %s\n"),
-		    scf_strerror(scf_error()));
-	}
-}
-
-static void
-lscf_set_runlevel(char rl)
-{
-	scf_handle_t *h;
-	scf_instance_t *inst = NULL;
-	scf_propertygroup_t *pg = NULL;
-	scf_transaction_t *tx = NULL;
-	scf_transaction_entry_t *ent = NULL;
-	scf_value_t *val = NULL;
-	char buf[2];
-	int r;
-
-	h = scf_handle_create(SCF_VERSION);
-	if (h == NULL) {
-		scferr();
-		return;
-	}
-
-	if (scf_handle_bind(h) != 0) {
-		switch (scf_error()) {
-		case SCF_ERROR_NO_SERVER:
-			console(B_TRUE,
-			    gettext("smf(5) repository server not running.\n"));
-			goto bail;
-
-		default:
-			scferr();
-			goto bail;
-		}
-	}
-
-	if ((inst = scf_instance_create(h)) == NULL ||
-	    (pg = scf_pg_create(h)) == NULL ||
-	    (val = scf_value_create(h)) == NULL ||
-	    (tx = scf_transaction_create(h)) == NULL ||
-	    (ent = scf_entry_create(h)) == NULL) {
-		scferr();
-		goto bail;
-	}
-
-get_inst:
-	r = get_or_add_startd(inst);
-	switch (r) {
-	case 0:
-		break;
-
-	case ENOMEM:
-	case ECONNABORTED:
-	case EPERM:
-	case EACCES:
-	case EROFS:
-		scferr();
-		goto bail;
-	default:
-		bad_error("get_or_add_startd", r);
-	}
-
-get_pg:
-	if (scf_instance_get_pg(inst, SCF_PG_OPTIONS_OVR, pg) != 0) {
-		switch (scf_error()) {
-		case SCF_ERROR_CONNECTION_BROKEN:
-			scferr();
-			goto bail;
-
-		case SCF_ERROR_DELETED:
-			goto get_inst;
-
-		case SCF_ERROR_NOT_FOUND:
-			break;
-
-		case SCF_ERROR_HANDLE_MISMATCH:
-		case SCF_ERROR_INVALID_ARGUMENT:
-		case SCF_ERROR_NOT_SET:
-		default:
-			bad_error("scf_instance_get_pg", scf_error());
-		}
-
-add_pg:
-		if (scf_instance_add_pg(inst, SCF_PG_OPTIONS_OVR,
-		    SCF_PG_OPTIONS_OVR_TYPE, SCF_PG_OPTIONS_OVR_FLAGS, pg) !=
-		    0) {
-			switch (scf_error()) {
-			case SCF_ERROR_CONNECTION_BROKEN:
-			case SCF_ERROR_PERMISSION_DENIED:
-			case SCF_ERROR_BACKEND_ACCESS:
-				scferr();
-				goto bail;
-
-			case SCF_ERROR_DELETED:
-				goto get_inst;
-
-			case SCF_ERROR_EXISTS:
-				goto get_pg;
-
-			case SCF_ERROR_HANDLE_MISMATCH:
-			case SCF_ERROR_INVALID_ARGUMENT:
-			case SCF_ERROR_NOT_SET:
-			default:
-				bad_error("scf_instance_add_pg", scf_error());
-			}
-		}
-	}
-
-	buf[0] = rl;
-	buf[1] = '\0';
-	r = scf_value_set_astring(val, buf);
-	assert(r == 0);
-
-	for (;;) {
-		if (scf_transaction_start(tx, pg) != 0) {
-			switch (scf_error()) {
-			case SCF_ERROR_CONNECTION_BROKEN:
-			case SCF_ERROR_PERMISSION_DENIED:
-			case SCF_ERROR_BACKEND_ACCESS:
-				scferr();
-				goto bail;
-
-			case SCF_ERROR_DELETED:
-				goto add_pg;
-
-			case SCF_ERROR_HANDLE_MISMATCH:
-			case SCF_ERROR_NOT_BOUND:
-			case SCF_ERROR_IN_USE:
-			case SCF_ERROR_NOT_SET:
-			default:
-				bad_error("scf_transaction_start", scf_error());
-			}
-		}
-
-		r = transaction_add_set(tx, ent, "runlevel", SCF_TYPE_ASTRING);
-		switch (r) {
-		case 0:
-			break;
-
-		case ECONNABORTED:
-			scferr();
-			goto bail;
-
-		case ECANCELED:
-			scf_transaction_reset(tx);
-			goto add_pg;
-
-		default:
-			bad_error("transaction_add_set", r);
-		}
-
-		r = scf_entry_add_value(ent, val);
-		assert(r == 0);
-
-		r = scf_transaction_commit(tx);
-		if (r == 1)
-			break;
-
-		if (r != 0) {
-			switch (scf_error()) {
-			case SCF_ERROR_CONNECTION_BROKEN:
-			case SCF_ERROR_PERMISSION_DENIED:
-			case SCF_ERROR_BACKEND_ACCESS:
-			case SCF_ERROR_BACKEND_READONLY:
-				scferr();
-				goto bail;
-
-			case SCF_ERROR_DELETED:
-				scf_transaction_reset(tx);
-				goto add_pg;
-
-			case SCF_ERROR_INVALID_ARGUMENT:
-			case SCF_ERROR_NOT_BOUND:
-			case SCF_ERROR_NOT_SET:
-			default:
-				bad_error("scf_transaction_commit",
-				    scf_error());
-			}
-		}
-
-		scf_transaction_reset(tx);
-		(void) scf_pg_update(pg);
-	}
-
-bail:
-	scf_transaction_destroy(tx);
-	scf_entry_destroy(ent);
-	scf_value_destroy(val);
-	scf_pg_destroy(pg);
-	scf_instance_destroy(inst);
-
-	(void) scf_handle_unbind(h);
-	scf_handle_destroy(h);
-}
-
-/*
  * Function to handle requests from users to main init running as process 1.
  */
 static void
@@ -3601,8 +3084,6 @@ userinit(int argc, char **argv)
 			}
 		}
 	}
-
-	update_boot_archive(init_signal);
 
 	(void) audit_put_record(ADT_SUCCESS, ADT_SUCCESS, argv[1]);
 
@@ -3765,7 +3246,7 @@ cleanaux()
 	pid_t	pid;
 	short	status;
 
-	(void) sigset(SIGCLD, SIG_DFL);
+	(void) sighold(SIGCLD);
 	Gchild = 0;	/* Note - Safe to do this here since no SIGCLDs */
 	(void) sighold(SIGPOLL);
 	savep = p = Plhead;
@@ -3795,7 +3276,7 @@ cleanaux()
 		p = p->pl_next;
 	}
 	(void) sigrelse(SIGPOLL);
-	(void) sigset(SIGCLD, childeath);
+	(void) sigrelse(SIGCLD);
 }
 
 
@@ -3824,7 +3305,8 @@ increase_proc_table_size()
 	 */
 	do
 		ptr = realloc(g_state, g_state_sz + delta);
-	while (ptr == NULL && errno == EAGAIN);
+	while (ptr == NULL && errno == EAGAIN)
+		;
 
 	if (ptr != NULL) {
 		/* ensure that the new part is initialized to zero */
@@ -3931,13 +3413,15 @@ st_init()
 	/* Get the size of the file. */
 	do
 		ret = fstat(st_fd, &stb);
-	while (ret == -1 && errno == EINTR);
+	while (ret == -1 && errno == EINTR)
+		;
 	if (ret == -1)
 		goto new_state;
 
 	do
 		g_state = malloc(stb.st_size);
-	while (g_state == NULL && errno == EAGAIN);
+	while (g_state == NULL && errno == EAGAIN)
+		;
 	if (g_state == NULL)
 		goto new_state;
 
@@ -3983,7 +3467,8 @@ new_state:
 	    ((init_num_proc - 1) * sizeof (struct PROC_TABLE));
 	do
 		g_state = calloc(1, g_state_sz);
-	while (g_state == NULL && errno == EAGAIN);
+	while (g_state == NULL && errno == EAGAIN)
+		;
 	if (g_state == NULL) {
 		/* Fatal error! */
 		exit(errno);
@@ -4091,7 +3576,8 @@ contract_make_template(uint_t info, uint_t critical, uint_t fatal,
 
 	do
 		fd = open64(CTFS_ROOT "/process/template", O_RDWR);
-	while (fd < 0 && errno == EINTR);
+	while (fd < 0 && errno == EINTR)
+		;
 	if (fd < 0) {
 		console(B_TRUE, "Couldn't create process template: %s.\n",
 		    strerror(errno));
@@ -4188,7 +3674,8 @@ contracts_init()
 	 */
 	do
 		fd = open64(CTFS_ROOT "/process/pbundle", O_RDONLY);
-	while (fd < 0 && errno == EINTR);
+	while (fd < 0 && errno == EINTR)
+		;
 	if (fd < 0) {
 		console(B_TRUE,
 		    "Couldn't open process pbundle: %s.  Core smf(5) services "
@@ -4221,7 +3708,8 @@ contract_getfile(ctid_t id, const char *name, int oflag)
 
 	do
 		fd = contract_open(id, "process", name, oflag);
-	while (fd < 0 && errno == EINTR);
+	while (fd < 0 && errno == EINTR)
+		;
 
 	if (fd < 0)
 		console(B_TRUE, "Couldn't open %s for contract %ld: %s.\n",
@@ -4420,8 +3908,8 @@ startd_run(const char *cline, int tmpl, ctid_t old_ctid)
 		    "Template activation failed; not starting \"%s\" in "
 		    "proper contract.\n", cline);
 
-	/* Hold SIGCHLD so we can wait if necessary. */
-	(void) sighold(SIGCHLD);
+	/* Hold SIGCLD so we can wait if necessary. */
+	(void) sighold(SIGCLD);
 
 	while ((pid = fork()) < 0) {
 		if (errno == EPERM) {
@@ -4491,7 +3979,7 @@ startd_run(const char *cline, int tmpl, ctid_t old_ctid)
 	if (old_ctid != 0)
 		(void) ct_pr_tmpl_set_transfer(tmpl, 0);
 
-	(void) sigrelse(SIGCHLD);
+	(void) sigrelse(SIGCLD);
 
 	return (0);
 }
